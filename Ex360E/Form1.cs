@@ -266,5 +266,15 @@ namespace Ex360E
                 }
             }
         }
+
+        private void runXEXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            Emu.Emu.Start(openFileDialog1.FileName, 1);
+        }
     }
 }
